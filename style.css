@@ -1,0 +1,59 @@
+/* --- ESTILO PARA O MANIFESTA KALÍS PÍSTIS --- */
+
+/* 1. CONFIGURAÇÃO DO BACKGROUND DE ARTE */
+body {
+    /* Define o background usando a imagem que você carregou */
+    background-image: url('assets/images/manifésta-kalís-pístis-lipe-yannik-iannyk-can-111627NOVP2025.png');
+    /* Garante que a imagem cubra toda a tela */
+    background-size: cover; 
+    /* Fixa a imagem para que ela não se mova ao rolar */
+    background-attachment: fixed;
+    /* Centraliza a imagem na tela */
+    background-position: center center;
+    /* Remove a margem padrão do body */
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. ESTILO DA CAIXA DE CONTEÚDO (Para legibilidade) */
+#main-content {
+    /* Define a largura máxima do conteúdo na tela */
+    max-width: 900px;
+    /* Centraliza a caixa de conteúdo horizontalmente */
+    margin: 40px auto; 
+    /* Fundo branco semi-transparente para o texto ser legível */
+    background-color: rgba(255, 255, 255, 0.9); 
+    /* Borda sutil para dar acabamento */
+    border: 1px solid #ddd;
+    /* Espaçamento interno */
+    padding: 30px;
+    /* Sombra para dar profundidade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. TIPOGRAFIA E CORES (Inspirado na arte monocromática) */
+h1 {
+    /* Fonte serifada e clássica */
+    font-family: 'Georgia', serif; 
+    /* Cor de texto escura (preto/grafite) */
+    color: #333; 
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+p, ul, li {
+    font-family: 'Times New Roman', serif; 
+    color: #444; 
+    line-height: 1.6;
+}
+
+/* 4. ESTILO DOS LINKS (Hyperlinks) */
+a {
+    /* Cor de link que harmonize (um tom de azul escuro ou cinza forte) */
+    color: #0056b3; 
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
