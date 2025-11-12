@@ -1,36 +1,41 @@
-/* --- ESTILO PARA O MANIFESTA KALÍS PÍSTIS (CÓDIGO FINAL DE LAYOUT) --- */
+/* --- ESTILO PARA O MANIFESTA KALÍS PÍSTIS (CÓDIGO COMPLETO FINAL) --- */
 
 /* 1. CONFIGURAÇÃO DO BACKGROUND DE ARTE */
+
+/* Reset do BODY - apenas cor de fundo */
 body {
-    /* Caminho absoluto para a imagem de fundo */
-    background-image: url('/-tssb-tfd-st77-for-hipermilhas-hiperbet-document-demo-details-101500NOVP2025/assets/images/manifesta-kalis-pistis-lipe-yannik-iannyk-can-120406NOVP2025.png');
-    
-    /* SOLUÇÃO DEFINITIVA: COBRIR A TELA TOTALMENTE (RESPONSIVO) */
-    background-size: cover; 
-    
-    background-repeat: no-repeat;
-    
-    /* Centraliza a arte, cobrindo todo o viewport */
-    background-position: center center; 
-    
-    /* Cor de fundo suave para preencher as áreas não cobertas pela imagem */
-    background-color: #F8E8F2; 
-    
+    background-image: none; /* Remove a imagem do corpo */
+    background-color: #F8E8F2; /* Cor de fundo suave */
     margin: 0;
     padding: 0;
-    /* Força o corpo a ter no mínimo a altura da tela */
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
-/* 2. ESTILO DA CAIXA DE CONTEÚDO (Para legibilidade) */
+/* NOVO BLOCO: ELEMENTO FIXO DE ARTE */
+#art-background-container {
+    background-image: url('/-tssb-tfd-st77-for-hipermilhas-hiperbet-document-demo-details-101500NOVP2025/assets/images/manifesta-kalis-pistis-lipe-yannik-iannyk-can-120406NOVP2025.png');
+    
+    /* SOLUÇÃO DEFINITIVA: Posiciona e dimensiona o elemento */
+    position: fixed; /* Fixa o elemento na tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa 100% da largura */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    
+    /* Garante que a imagem inteira seja visível, mas centralizada no topo */
+    background-size: 100% auto; /* 100% da largura, altura automática */
+    background-repeat: no-repeat;
+    background-position: center top; 
+    
+    z-index: -1; /* Coloca a arte atrás do conteúdo principal */
+}
+
+/* 2. ESTILO DA CAIXA DE CONTEÚDO */
 #main-content {
     max-width: 900px;
-    
-    /* CORREÇÃO: Usamos 'vh' (porcentagem da altura do viewport) para posicionar o conteúdo */
-    /* Empurra o conteúdo para 25% da tela abaixo do topo no Desktop */
+    /* CORREÇÃO: Usa 'vh' para posicionamento dinâmico no desktop */
     margin: 25vh auto 50px auto; 
     
-    /* Fundo opaco para total legibilidade sobre a arte */
     background-color: rgb(255, 255, 255); 
     border: 1px solid #ddd;
     padding: 30px;
@@ -54,7 +59,6 @@ p, ul, li {
 
 /* 4. ESTILO DOS LINKS (Hyperlinks) */
 a {
-    /* Cor de link que harmonize com o fundo artístico */
     color: #800080; 
     text-decoration: none;
 }
@@ -73,6 +77,4 @@ a:hover {
         width: 95%; 
         max-width: none;
     }
-    
-    /* O background-size: cover já é responsivo, não precisa de mais ajustes no body */
 }
