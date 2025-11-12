@@ -1,23 +1,24 @@
-/* --- ESTILO PARA O MANIFESTA KALÍS PÍSTIS (ADAPTADO AO FUNDO ROSA/ROXO) --- */
+/* --- ESTILO PARA O MANIFESTA KALÍS PÍSTIS (CÓDIGO FINAL DE LAYOUT) --- */
+
 /* 1. CONFIGURAÇÃO DO BACKGROUND DE ARTE */
 body {
+    /* Caminho absoluto para a imagem de fundo */
     background-image: url('/-tssb-tfd-st77-for-hipermilhas-hiperbet-document-demo-details-101500NOVP2025/assets/images/manifesta-kalis-pistis-lipe-yannik-iannyk-can-120406NOVP2025.png');
     
-    /* CORREÇÃO: Usa 'contain' novamente, mas força a centralização superior. */
-    background-size: contain; 
+    /* SOLUÇÃO DEFINITIVA: COBRIR A TELA TOTALMENTE (RESPONSIVO) */
+    background-size: cover; 
     
     background-repeat: no-repeat;
     
-    /* Centraliza horizontalmente, mas fixa a imagem no TOPO */
-    background-position: center top; 
+    /* Centraliza a arte, cobrindo todo o viewport */
+    background-position: center center; 
     
-    /* AJUSTE: Cor de fundo sólida para preencher o espaço VAZIO (o fundo do seu gradiente) */
-    /* Usei um rosa mais suave para harmonizar com o fundo magenta do seu anexo. */
+    /* Cor de fundo suave para preencher as áreas não cobertas pela imagem */
     background-color: #F8E8F2; 
     
     margin: 0;
     padding: 0;
-    /* Define altura mínima total para ver o fundo em páginas curtas */
+    /* Força o corpo a ter no mínimo a altura da tela */
     min-height: 100vh; 
 }
 
@@ -25,11 +26,11 @@ body {
 #main-content {
     max-width: 900px;
     
-    /* AJUSTE MAIS AGRESSIVO: Empurra o conteúdo para baixo. */
-    /* Tente 420px ou 450px para garantir que a arte não seja tocada. */
-    /* Aumentei a margem inferior para dar espaço de rolagem. */
-    margin: 420px auto 100px auto; 
+    /* CORREÇÃO: Usamos 'vh' (porcentagem da altura do viewport) para posicionar o conteúdo */
+    /* Empurra o conteúdo para 25% da tela abaixo do topo no Desktop */
+    margin: 25vh auto 50px auto; 
     
+    /* Fundo opaco para total legibilidade sobre a arte */
     background-color: rgb(255, 255, 255); 
     border: 1px solid #ddd;
     padding: 30px;
@@ -39,7 +40,7 @@ body {
 /* 3. TIPOGRAFIA E CORES */
 h1 {
     font-family: 'Georgia', serif; 
-    color: #333; /* Cor de texto escura */
+    color: #333; 
     text-align: center;
     border-bottom: 2px solid #ccc;
     padding-bottom: 10px;
@@ -53,27 +54,25 @@ p, ul, li {
 
 /* 4. ESTILO DOS LINKS (Hyperlinks) */
 a {
-    /* Mudança: Cor de link mais profunda que combine com o fundo artístico */
-    color: #800080; /* Um tom de roxo/magenta escuro */
+    /* Cor de link que harmonize com o fundo artístico */
+    color: #800080; 
     text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
-    color: #C71585; /* Rosa mais vibrante no hover */
+    color: #C71585; 
 }
 
 /* 5. RESPONSIVIDADE PARA TELAS MENORES (Celulares) */
 @media (max-width: 768px) {
     
-    /* Reduz a margem superior do conteúdo para compensar a tela menor */
+    /* AJUSTE RESPONSIVO: Reduz a margem superior do conteúdo no mobile */
     #main-content {
-        margin: 300px 10px 50px 10px; /* Margem lateral menor */
-        width: 95%; /* Ocupa quase toda a largura */
+        /* Posição mais alta no mobile (15% da altura da tela) */
+        margin: 15vh 10px 50px 10px; 
+        width: 95%; 
         max-width: none;
     }
     
-    /* Garante que o fundo seja redimensionado corretamente no celular */
-    body {
-        background-size: 100% auto; 
-    }
+    /* O background-size: cover já é responsivo, não precisa de mais ajustes no body */
 }
