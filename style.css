@@ -1,26 +1,35 @@
 /* --- ESTILO PARA O MANIFESTA KALÍS PÍSTIS (ADAPTADO AO FUNDO ROSA/ROXO) --- */
-
 /* 1. CONFIGURAÇÃO DO BACKGROUND DE ARTE */
 body {
     background-image: url('/-tssb-tfd-st77-for-hipermilhas-hiperbet-document-demo-details-101500NOVP2025/assets/images/manifesta-kalis-pistis-lipe-yannik-iannyk-can-120406NOVP2025.png');
-    /* CORREÇÃO CHAVE: 'contain' garante que a imagem inteira apareça. */
-    /* Usaremos 'contain' combinado com 'center' para que ela seja centralizada. */
+    
+    /* CORREÇÃO: Usa 'contain' novamente, mas força a centralização superior. */
     background-size: contain; 
-    background-repeat: no-repeat; 
-    /* Centraliza a imagem no meio da tela */
-    background-position: center center; 
-    /* Define uma cor de fundo sólida para preencher o espaço onde a imagem não alcança */
-    /* (Usa a cor mais clara do seu gradiente) */
-    background-color: #f7e6f0; 
+    
+    background-repeat: no-repeat;
+    
+    /* Centraliza horizontalmente, mas fixa a imagem no TOPO */
+    background-position: center top; 
+    
+    /* AJUSTE: Cor de fundo sólida para preencher o espaço VAZIO (o fundo do seu gradiente) */
+    /* Usei um rosa mais suave para harmonizar com o fundo magenta do seu anexo. */
+    background-color: #F8E8F2; 
+    
     margin: 0;
     padding: 0;
+    /* Define altura mínima total para ver o fundo em páginas curtas */
+    min-height: 100vh; 
 }
 
 /* 2. ESTILO DA CAIXA DE CONTEÚDO (Para legibilidade) */
 #main-content {
     max-width: 900px;
-    /* AJUSTE: Aumentar a margem superior e inferior para centralizar o texto na parte inferior da tela, longe dos banners no topo. */
-    margin: 250px auto 100px auto; /* Tente 250px de topo como ponto de partida */
+    
+    /* AJUSTE MAIS AGRESSIVO: Empurra o conteúdo para baixo. */
+    /* Tente 420px ou 450px para garantir que a arte não seja tocada. */
+    /* Aumentei a margem inferior para dar espaço de rolagem. */
+    margin: 420px auto 100px auto; 
+    
     background-color: rgb(255, 255, 255); 
     border: 1px solid #ddd;
     padding: 30px;
@@ -51,4 +60,20 @@ a {
 a:hover {
     text-decoration: underline;
     color: #C71585; /* Rosa mais vibrante no hover */
+}
+
+/* 5. RESPONSIVIDADE PARA TELAS MENORES (Celulares) */
+@media (max-width: 768px) {
+    
+    /* Reduz a margem superior do conteúdo para compensar a tela menor */
+    #main-content {
+        margin: 300px 10px 50px 10px; /* Margem lateral menor */
+        width: 95%; /* Ocupa quase toda a largura */
+        max-width: none;
+    }
+    
+    /* Garante que o fundo seja redimensionado corretamente no celular */
+    body {
+        background-size: 100% auto; 
+    }
 }
