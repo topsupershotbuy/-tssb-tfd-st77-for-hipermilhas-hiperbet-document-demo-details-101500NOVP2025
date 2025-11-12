@@ -4,8 +4,9 @@
 
 /* Reset do BODY - apenas cor de fundo */
 body {
-    background-image: none; /* Remove a imagem do corpo */
-    background-color: #F8E8F2; /* Cor de fundo suave */
+    /* Remove a imagem do corpo para evitar conflitos */
+    background-image: none; 
+    background-color: #F8E8F2; 
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -22,7 +23,7 @@ body {
     width: 100%; /* Ocupa 100% da largura */
     height: 100vh; /* Ocupa 100% da altura da tela */
     
-    /* Garante que a imagem inteira seja visível, mas centralizada no topo */
+    /* Garante que a imagem inteira seja visível, ancorada no topo */
     background-size: 100% auto; /* 100% da largura, altura automática */
     background-repeat: no-repeat;
     background-position: center top; 
@@ -33,7 +34,7 @@ body {
 /* 2. ESTILO DA CAIXA DE CONTEÚDO */
 #main-content {
     max-width: 900px;
-    /* CORREÇÃO: Usa 'vh' para posicionamento dinâmico no desktop */
+    /* CORREÇÃO: Usa 'vh' para posicionamento dinâmico (25% da tela) no desktop */
     margin: 25vh auto 50px auto; 
     
     background-color: rgb(255, 255, 255); 
