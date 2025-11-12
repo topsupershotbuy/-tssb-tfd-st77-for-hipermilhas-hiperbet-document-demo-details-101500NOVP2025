@@ -2,24 +2,29 @@
 
 /* 1. CONFIGURAÇÃO DO BACKGROUND DE ARTE */
 body {
-    /* O caminho é o mesmo. Apenas o arquivo subiu de qualidade/cor. */
     background-image: url('/-tssb-tfd-st77-for-hipermilhas-hiperbet-document-demo-details-101500NOVP2025/assets/images/manifesta-kalis-pistis-lipe-yannik-iannyk-can-120406NOVP2025.png');
-    background-size: cover; 
-    background-attachment: fixed;
-    background-position: center center;
+    /* CORREÇÃO CHAVE: 'contain' garante que a imagem inteira apareça. */
+    /* Usaremos 'contain' combinado com 'center' para que ela seja centralizada. */
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    /* Centraliza a imagem no meio da tela */
+    background-position: center center; 
+    /* Define uma cor de fundo sólida para preencher o espaço onde a imagem não alcança */
+    /* (Usa a cor mais clara do seu gradiente) */
+    background-color: #f7e6f0; 
     margin: 0;
     padding: 0;
 }
 
-/* 2. ESTILO DA CAIXA DE CONTEÚDO (Ajuste de Transparência para Fundo Escuro) */
+/* 2. ESTILO DA CAIXA DE CONTEÚDO (Para legibilidade) */
 #main-content {
     max-width: 900px;
-    margin: 40px auto; 
-    /* Mudança: Fundo branco OPAC (sem transparência) para garantir legibilidade */
+    /* AJUSTE: Aumentar a margem superior e inferior para centralizar o texto na parte inferior da tela, longe dos banners no topo. */
+    margin: 250px auto 100px auto; /* Tente 250px de topo como ponto de partida */
     background-color: rgb(255, 255, 255); 
     border: 1px solid #ddd;
     padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra um pouco mais forte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 3. TIPOGRAFIA E CORES */
