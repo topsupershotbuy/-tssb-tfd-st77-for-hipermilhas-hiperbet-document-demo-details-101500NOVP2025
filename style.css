@@ -1,42 +1,31 @@
-/* --- ESTILO PARA O MANIFESTA KALÍS PÍSTIS --- */
+/* --- ESTILO PARA O MANIFESTA KALÍS PÍSTIS (ADAPTADO AO FUNDO ROSA/ROXO) --- */
 
 /* 1. CONFIGURAÇÃO DO BACKGROUND DE ARTE */
 body {
-    /* Define o background usando a imagem que você carregou */
+    /* O caminho é o mesmo. Apenas o arquivo subiu de qualidade/cor. */
     background-image: url('/-tssb-tfd-st77-for-hipermilhas-hiperbet-document-demo-details-101500NOVP2025/assets/images/manifesta-kalis-pistis-lipe-yannik-iannyk-can-111627NOVP2025.png');
-    /* Garante que a imagem cubra toda a tela */
     background-size: cover; 
-    /* Fixa a imagem para que ela não se mova ao rolar */
     background-attachment: fixed;
-    /* Centraliza a imagem na tela */
     background-position: center center;
-    /* Remove a margem padrão do body */
     margin: 0;
     padding: 0;
 }
 
-/* 2. ESTILO DA CAIXA DE CONTEÚDO (Para legibilidade) */
+/* 2. ESTILO DA CAIXA DE CONTEÚDO (Ajuste de Transparência para Fundo Escuro) */
 #main-content {
-    /* Define a largura máxima do conteúdo na tela */
     max-width: 900px;
-    /* Centraliza a caixa de conteúdo horizontalmente */
     margin: 40px auto; 
-    /* Fundo branco semi-transparente para o texto ser legível */
-    background-color: rgba(255, 255, 255, 0.9); 
-    /* Borda sutil para dar acabamento */
+    /* Mudança: Fundo branco OPAC (sem transparência) para garantir legibilidade */
+    background-color: rgb(255, 255, 255); 
     border: 1px solid #ddd;
-    /* Espaçamento interno */
     padding: 30px;
-    /* Sombra para dar profundidade */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra um pouco mais forte */
 }
 
-/* 3. TIPOGRAFIA E CORES (Inspirado na arte monocromática) */
+/* 3. TIPOGRAFIA E CORES */
 h1 {
-    /* Fonte serifada e clássica */
     font-family: 'Georgia', serif; 
-    /* Cor de texto escura (preto/grafite) */
-    color: #333; 
+    color: #333; /* Cor de texto escura */
     text-align: center;
     border-bottom: 2px solid #ccc;
     padding-bottom: 10px;
@@ -50,10 +39,11 @@ p, ul, li {
 
 /* 4. ESTILO DOS LINKS (Hyperlinks) */
 a {
-    /* Cor de link que harmonize (um tom de azul escuro ou cinza forte) */
-    color: #0056b3; 
+    /* Mudança: Cor de link mais profunda que combine com o fundo artístico */
+    color: #800080; /* Um tom de roxo/magenta escuro */
     text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
+    color: #C71585; /* Rosa mais vibrante no hover */
 }
