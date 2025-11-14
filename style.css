@@ -1,81 +1,58 @@
-/* --- ESTILO PARA O MANIFESTA KALÍS PÍSTIS (CÓDIGO COMPLETO FINAL) --- */
+/* --- ESTILO PARA O TEMPLATE FINAL DE E-MAIL (SIMPLIFICADO) --- */
 
 /* 1. CONFIGURAÇÃO DO BACKGROUND DE ARTE */
-
-/* Reset do BODY - apenas cor de fundo */
 body {
-    /* Remove a imagem do corpo para evitar conflitos */
-    background-image: none; 
-    background-color: #F8E8F2; 
+    /* CORREÇÃO CRÍTICA: Removendo o background-container fixo, colocando no body */
+    background-image: url('/-tssb-tfd-st77-for-hipermilhas-hiperbet-document-demo-details-101500NOVP2025/assets/images/minimal-bg-final.jpg');
+    
+    /* Garante que o background cubra a tela, focando no centro */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-attachment: fixed; /* Mantém o fundo fixo */
+    
+    background-color: #F8E8F2; /* Cor de fundo suave */
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    font-family: Arial, sans-serif; /* Fonte padrão para e-mail/web */
 }
 
-/* NOVO BLOCO: ELEMENTO FIXO DE ARTE */
-#art-background-container {
-    background-image: url('/-tssb-tfd-st77-for-hipermilhas-hiperbet-document-demo-details-101500NOVP2025/assets/images/manifesta-kalis-pistis-lipe-yannik-iannyk-can-120406NOVP2025.png');
-    
-    /* SOLUÇÃO DEFINITIVA: Posiciona e dimensiona o elemento */
-    position: fixed; /* Fixa o elemento na tela */
-    top: 0;
-    left: 0;
-    width: 100%; /* Ocupa 100% da largura */
-    height: 100vh; /* Ocupa 100% da altura da tela */
-    
-    /* Garante que a imagem inteira seja visível, ancorada no topo */
-    background-size: 100% auto; /* 100% da largura, altura automática */
-    background-repeat: no-repeat;
-    background-position: center top; 
-    
-    z-index: -1; /* Coloca a arte atrás do conteúdo principal */
-}
-
-/* 2. ESTILO DA CAIXA DE CONTEÚDO */
+/* 2. ESTILO DA CAIXA DE CONTEÚDO (Centraliza o texto e o CTA) */
 #main-content {
     max-width: 900px;
-    /* CORREÇÃO: Usa 'vh' para posicionamento dinâmico (25% da tela) no desktop */
-    margin: 25vh auto 50px auto; 
-    
-    background-color: rgb(255, 255, 255); 
-    border: 1px solid #ddd;
+    /* Centraliza o conteúdo no meio da tela verticalmente e horizontalmente */
+    margin: 15vh auto; 
     padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centraliza o texto */
+    
+    /* Fundo branco semi-transparente para legibilidade sobre a colagem */
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* 3. TIPOGRAFIA E CORES */
 h1 {
     font-family: 'Georgia', serif; 
     color: #333; 
-    text-align: center;
-    border-bottom: 2px solid #ccc;
     padding-bottom: 10px;
 }
 
-p, ul, li {
-    font-family: 'Times New Roman', serif; 
-    color: #444; 
-    line-height: 1.6;
-}
-
-/* 4. ESTILO DOS LINKS (Hyperlinks) */
-a {
-    color: #800080; 
+/* 4. ESTILO DO CTA (O Hyperlink) */
+#cta-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 30px;
+    background-color: #C71585; /* Rosa vibrante (do seu gradiente) */
+    color: white;
     text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-    color: #C71585; 
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-/* 5. RESPONSIVIDADE PARA TELAS MENORES (Celulares) */
-@media (max-width: 768px) {
-    
-    /* AJUSTE RESPONSIVO: Reduz a margem superior do conteúdo no mobile */
-    #main-content {
-        /* Posição mais alta no mobile (15% da altura da tela) */
-        margin: 15vh 10px 50px 10px; 
-        width: 95%; 
-        max-width: none;
-    }
+#cta-link:hover {
+    background-color: #800080; /* Roxo mais escuro */
 }
