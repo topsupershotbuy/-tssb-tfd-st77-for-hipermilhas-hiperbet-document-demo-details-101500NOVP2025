@@ -1,58 +1,146 @@
-/* --- ESTILO PARA O TEMPLATE FINAL DE E-MAIL (SIMPLIFICADO) --- */
+/* --- ESTILO PARA O TEMPLATE FINAL COM BOTÃO ÚNICO E BACKGROUND COMPLETO --- */
 
-/* 1. CONFIGURAÇÃO DO BACKGROUND DE ARTE */
+/* 1. CONFIGURAÇÃO DO BACKGROUND DE ARTE (NOVA IMAGEM) */
 body {
-    /* CORREÇÃO CRÍTICA: Removendo o background-container fixo, colocando no body */
-    background-image: url('/-tssb-tfd-st77-for-hipermilhas-hiperbet-document-demo-details-101500NOVP2025/assets/images/minimal-bg-final.jpg');
+    background-image: url('/-tssb-tfd-st77-for-hipermilhas-hiperbet-document-demo-details-101500NOVP2025/assets/images/minimal-bg-final.jpg'); /* Nova imagem de background */
     
-    /* Garante que o background cubra a tela, focando no centro */
-    background-size: cover; 
+    background-size: cover; /* COBRE A TELA TODA */
     background-repeat: no-repeat;
-    background-position: center center; 
-    background-attachment: fixed; /* Mantém o fundo fixo */
+    background-position: center center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Fixa o fundo na rolagem */
     
-    background-color: #F8E8F2; /* Cor de fundo suave */
+    background-color: #F8E8F2; /* Cor de fallback */
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    font-family: Arial, sans-serif; /* Fonte padrão para e-mail/web */
+    font-family: Arial, sans-serif;
 }
 
-/* 2. ESTILO DA CAIXA DE CONTEÚDO (Centraliza o texto e o CTA) */
+/* 2. ESTILO DA CAIXA DE CONTEÚDO (Para o menu de planilhas) */
 #main-content {
-    max-width: 900px;
-    /* Centraliza o conteúdo no meio da tela verticalmente e horizontalmente */
-    margin: 15vh auto; 
+    max-width: 600px; /* Reduz a largura para ficar mais centralizado */
+    margin: 15vh auto 50px auto; /* Centraliza verticalmente, empurra para baixo */
     padding: 30px;
-    text-align: center; /* Centraliza o texto */
-    
-    /* Fundo branco semi-transparente para legibilidade sobre a colagem */
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: left; /* Alinha o texto das planilhas à esquerda */
+    
+    /* Inicialmente oculto, será mostrado pelo JavaScript */
+    display: none; 
+    position: relative; /* Para garantir o posicionamento da caixa */
+    z-index: 100; /* Garante que fique acima de outros elementos */
 }
 
-/* 3. TIPOGRAFIA E CORES */
+/* 3. ESTILO DO BOTÃO DE ACESSO ÚNICO */
+#acessar-planilhas-btn {
+    position: absolute; /* Posicionamento absoluto sobre o background */
+    top: 30%; /* 30% do topo da tela (ajuste conforme necessário) */
+    right: 10%; /* 10% da direita da tela (ajuste conforme necessário) */
+    transform: translateY(-50%); /* Ajuste vertical para centralizar */
+    padding: 15px 25px;
+    background-color: #C71585; /* Rosa vibrante */
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    z-index: 50; /* Abaixo da caixa de conteúdo se ela aparecer */
+}
+
+#acessar-planilhas-btn:hover {
+    background-color: #800080; /* Roxo mais escuro no hover */
+}
+
+/* 4. TIPOGRAFIA E CORES */
 h1 {
     font-family: 'Georgia', serif; 
     color: #333; 
+    text-align: center;
+    border-bottom: 2px solid #ccc;
     padding-bottom: 10px;
 }
 
-/* 4. ESTILO DO CTA (O Hyperlink) */
-#cta-link {
-    display: inline-block;
+h2, h3 { /* Estilo para títulos internos das planilhas */
+    color: #800080; 
+    text-align: left; /* Alinha à esquerda nas planilhas */
     margin-top: 25px;
-    padding: 15px 30px;
-    background-color: #C71585; /* Rosa vibrante (do seu gradiente) */
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-#cta-link:hover {
-    background-color: #800080; /* Roxo mais escuro */
+p, ul, li, table {
+    font-family: 'Times New Roman', serif; 
+    color: #444; 
+    line-height: 1.6;
+    text-align: left; /* Alinha o texto das planilhas à esquerda */
+}
+
+/* Estilo para tabelas (apenas na Planilha 10) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+table th {
+    background-color: #f2f2f2;
+    color: #800080;
+}
+table tfoot {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(128, 0, 128, 0), rgba(128, 0, 128, 0.75), rgba(128, 0, 128, 0));
+    margin: 40px 0;
+}
+
+/* 5. ESTILO DOS LINKS (Hyperlinks) */
+a {
+    color: #800080; 
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #C71585; 
+}
+
+/* 6. CORREÇÃO DE LISTAS PARA NAVEGAÇÃO */
+nav a { /* Estilo para os links do menu da caixa branca */
+    display: block; /* Cada link em uma nova linha */
+    padding: 5px 0; /* Espaçamento entre os links */
+    color: #800080;
+    text-decoration: none;
+    font-size: 1.1em;
+    text-align: left; /* Alinha os links do menu à esquerda */
+}
+nav a:hover {
+    color: #C71585;
+    text-decoration: underline;
+}
+
+/* 7. RESPONSIVIDADE PARA TELAS MENORES (Celulares) */
+@media (max-width: 768px) {
+    #main-content {
+        max-width: 90%; /* Aumenta a largura em mobile */
+        margin: 10vh auto 30px auto; 
+        padding: 20px;
+    }
+    
+    #acessar-planilhas-btn {
+        top: 20%; /* Posição ajustada para mobile */
+        right: 5%; /* Ajuste para mobile */
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    /* O background-size: cover já é responsivo */
 }
