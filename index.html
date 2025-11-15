@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manifésta Kalís Pístis</title>
+    <title>Manifesta Kalís Pístis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <div id="art-background-container"></div>
-    
-<div id="main-content">
-    <h1>Manifesta Kalís Pístis</h1>
-    <p>Acesse aqui o conteúdo das 10 planilhas interligadas do projeto HiperMilhas:</p>
-    
-    <nav>
-        <ul>
-            <li><a href="planilha1.html">Planilha 1: Objetivo do Projeto</a></li>
-            <li><a href="planilha2.html">Planilha 2: Como Funciona</a></li>
-            <li><a href="planilha3.html">Planilha 3: Níveis de Fidelidade</a></li>
-            <li><a href="planilha4.html">Planilha 4: Categorias de Resgate</a></li>
-            <li><a href="planilha5.html">Planilha 5: Engajamento e Gamificação</a></li>
-            <li><a href="planilha6.html">Planilha 6: Benefícios Estratégicos</a></li>
-            <li><a href="planilha7.html">Planilha 7: Plano de Lançamento</a></li>
-            <li><a href="planilha8.html">Planilha 8: Requisitos Técnicos (Back-End)</a></li>
-            <li><a href="planilha9.html">Planilha 9: Requisitos Técnicos (Front-End)</a></li>
-            <li><a href="planilha10.html">Planilha 10: Custo e Investimento Total</a></li>
-        </ul>
-    </nav>
-</div>
-            <li><a href="planilha1.html">Planilha 1</a></li>
-            </ul>
+    <a href="#" id="acessar-planilhas-btn">ACESSAR PLANILHAS</a>
+
+    <div id="main-content">
+        <h1>Manifesta Kalís Pístis</h1>
+        <p>Acesse aqui o conteúdo das 10 planilhas interligadas do projeto HiperMilhas:</p>
+        
+        <nav>
+            <p><a href="planilha1.html">Planilha 1: Objetivo do Projeto</a></p>
+            <p><a href="planilha2.html">Planilha 2: Como Funciona</a></p>
+            <p><a href="planilha3.html">Planilha 3: Níveis de Fidelidade</a></p>
+            <p><a href="planilha4.html">Planilha 4: Categorias de Resgate</a></p>
+            <p><a href="planilha5.html">Planilha 5: Engajamento e Gamificação</a></p>
+            <p><a href="planilha6.html">Planilha 6: Benefícios Estratégicos</a></p>
+            <p><a href="planilha7.html">Planilha 7: Plano de Lançamento</a></p>
+            <p><a href="planilha8.html">Planilha 8: Requisitos Técnicos (Back-End)</a></p>
+            <p><a href="planilha9.html">Planilha 9: Requisitos Técnicos (Front-End)</a></p>
+            <p><a href="planilha10.html">Planilha 10: Custo e Investimento Total</a></p>
+        </nav>
     </div>
+
+    <script>
+        document.getElementById('acessar-planilhas-btn').addEventListener('click', function(event) {
+            event.preventDefault(); // Impede o link de navegar para '#'
+            var mainContent = document.getElementById('main-content');
+            if (mainContent.style.display === 'none' || mainContent.style.display === '') {
+                mainContent.style.display = 'block';
+            } else {
+                mainContent.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
