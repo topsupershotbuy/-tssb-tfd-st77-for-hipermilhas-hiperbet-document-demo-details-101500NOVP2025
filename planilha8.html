@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha 8 - Requisitos Back-End</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="art-background-container"></div>
+    
+    <div id="main-content">
+        <h1>Planilha 8: Requisitos Técnicos (Back-End)</h1>
+        <hr>
+        
+        <p>O Back-End é o Motor de Milhas, responsável por toda a lógica de acumulação e gestão de dados do programa HiperMilhas.</p>
 
+        <h2>Integrações e Lógica Principal</h2>
+        <ul>
+            <li><strong>Integração Core:</strong> API de escuta (webhook/endpoint) para receber Depósitos e Apostas em tempo real.</li>
+            <li><strong>Lógica de Acúmulo:</strong> Cálculo de 1 Milha / R$1,00 depositado, incluindo regras para Milhas Extras.</li>
+            <li><strong>Gestão de Níveis:</strong> Lógica para armazenar, atualizar e aplicar bônus percentuais (Prata, Ouro, Diamante).</li>
+        </ul>
+        
+        <h2>APIs e Segurança</h2>
+        <ul>
+            <li><strong>API de Consulta:</strong> APIs de leitura otimizadas para o Front-End consultar Saldo, Nível, Progresso e Histórico em tempo real.</li>
+            <li><strong>Módulo de Resgate Digital:</strong> API para processar o resgate e integrar com a plataforma Hiperbet (liberação instantânea de bônus).</li>
+            <li><strong>Segurança:</strong> Implementação de logs detalhados para todas as transações, garantindo rastreabilidade e integridade.</li>
+        </ul>
+        
+        <hr>
+        
+        <p>
+            <a href="planilha7.html">← Planilha Anterior: Plano de Lançamento</a> | 
+            <a href="index.html">Menu Principal</a> |
+            <a href="planilha9.html">Próxima Planilha: Requisitos Técnicos (Front-End) →</a>
+        </p>
+    </div>
+</body>
+</html>
