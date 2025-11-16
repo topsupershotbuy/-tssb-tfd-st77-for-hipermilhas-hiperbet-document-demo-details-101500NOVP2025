@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manifesta Kalís Pístis</title>
+    <title>Plataforma HiperMilhas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <a href="#" id="acessar-planilhas-btn">Planilhas Projeto HiperMilhas</a>
 
     <div id="main-content">
-        <h1>Manifesta Kalís Pístis</h1>
+        <h1>Plataforma HiperMilhas</h1>
         <p>Acesse aqui o conteúdo das 10 planilhas interligadas do projeto HiperMilhas:</p>
         
         <nav>
@@ -30,7 +30,7 @@
 
     <script>
         document.getElementById('acessar-planilhas-btn').addEventListener('click', function(event) {
-            event.preventDefault(); // Impede o link de navegar para '#'
+            event.preventDefault(); 
             var mainContent = document.getElementById('main-content');
             if (mainContent.style.display === 'none' || mainContent.style.display === '') {
                 mainContent.style.display = 'block';
