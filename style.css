@@ -32,22 +32,26 @@ body {
     z-index: 100; /* Garante que fique acima de outros elementos */
 }
 
-/* 3. ESTILO DO BOTÃO DE ACESSO ÚNICO */
+/* 3. ESTILO DO BOTÃO DE ACESSO ÚNICO (AJUSTADO) */
 #acessar-planilhas-btn {
-    position: absolute; /* Posicionamento absoluto sobre o background */
-    top: 30%; /* 30% do topo da tela (ajuste conforme necessário) */
-    right: 10%; /* 10% da direita da tela (ajuste conforme necessário) */
-    transform: translateY(-50%); /* Ajuste vertical para centralizar */
-    padding: 15px 25px;
-    background-color: #C71585; /* Rosa vibrante */
+    position: fixed; /* Usamos fixed para garantir que ele fique na posição correta */
+    
+    /* POSICIONAMENTO AJUSTADO */
+    top: 40%; /* Move para baixo (estava em 30%) */
+    right: 15%; /* Move para a esquerda (estava em 10% da borda direita) */
+    
+    /* DIMENSIONAMENTO AUMENTADO em 30% */
+    padding: 18px 33px; /* Aumenta o padding */
+    font-size: 1.43em; /* Aumenta a fonte (~30% a mais que 1.1em) */
+    
+    background-color: #C71585; 
     color: white;
     text-decoration: none;
-    font-size: 1.1em;
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra mais forte */
     transition: background-color 0.3s ease;
-    z-index: 50; /* Abaixo da caixa de conteúdo se ela aparecer */
+    z-index: 50; 
 }
 
 #acessar-planilhas-btn:hover {
